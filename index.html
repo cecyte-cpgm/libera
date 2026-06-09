@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orientación Vocacional - CECyTE La Presa</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="script.js" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;family=Merriweather+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&amp;display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="inst-bar">
+    <div class="inst-bar-logos">
+      <img alt="CECyTE Baja California" src="https://cecytebc.edu.mx/hd/images/cecytebcprint.png" />
+    </div>
+  </div>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">
+        <div class="logo-badge">BC</div>
+        CECYTE LA PRESA
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-cta" href="https://cecytebc.edu.mx/ha/" target="_blank">Ir al Portal de CECyTE</a></li>
+      </ul>
+      <button aria-label="Menú" class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="hero" style="min-height: 450px; height: 50vh;">
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner container" style="grid-template-columns: 1fr; text-align: center;">
+      <div>
+        <div class="hero-tag"><span></span> Orientación Vocacional</div>
+        <h1 class="hero-title">CECyTE <em>La Presa</em></h1>
+        <p class="hero-desc" style="margin: 0 auto 2.5rem;">Descubre cómo liberar tus horas de servicio social y tus prácticas profesionales.</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="checker-strip">
+      <div class="checker-inner">
+        <div class="checker-item"><span class="checker-dot"></span>Servicio Social</div>
+        <div class="checker-item"><span class="checker-dot"></span>Prácticas Profesionales</div>
+        <div class="checker-item"><span class="checker-dot"></span>Unidad Receptora</div>
+        <div class="checker-item"><span class="checker-dot"></span>Baja California</div>
+        <div class="checker-item"><span class="checker-dot"></span>Servicio Social</div>
+        <div class="checker-item"><span class="checker-dot"></span>Prácticas Profesionales</div>
+        <div class="checker-item"><span class="checker-dot"></span>Unidad Receptora</div>
+        <div class="checker-item"><span class="checker-dot"></span>Baja California</div>
+      </div>
+  </section>
+  <main class="container section-pad">
+    <div class="section-label">Como liberar</div>
+    <h2 class="section-title">Carreras <span>Técnicas</span></h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-icon">📊</div>
+        <h3>Administración</h3>
+        <p>Aprende sobre recursos humanos, finanzas, contabilidad y administración empresarial.</p>
+        <button class="btn-orange" onclick="abrirMenu('Administración')">Ver Detalles</button>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">💻</div>
+        <h3>Programación</h3>
+        <p>Desarrollo de software, mantenimiento de bases de datos y creación de aplicaciones.</p>
+        <button class="btn-orange" onclick="abrirMenu('Programación')">Ver Detalles</button>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🏨</div>
+        <h3>Hotelería</h3>
+        <p>Turismo, atención al cliente, logística y administración de eventos hoteleros.</p>
+        <button class="btn-orange" onclick="abrirMenu('Hotelería')">Ver Detalles</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="miModal" class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" onclick="cerrarModal()">&times;</button>
+
+      <h2 id="tituloCarrera">Carrera</h2>
+      <div id="infoCarrera" class="modal-sub"></div>
+
+      <p style="font-family: var(--font-display); font-weight: 800; margin-bottom: 1rem;">Opciones adicionales:</p>
+
+      <div class="opciones-grid">
+        <button class="btn-ghost modal-btn" onclick="mostrarInfo('Servicio Social')">📂 Servicio Social</button>
+        <button class="btn-ghost modal-btn" onclick="mostrarInfo('Prácticas Profesionales')">💼 Prácticas
+          Profesionales</button>
+        <button class="btn-ghost modal-btn" onclick="mostrarInfo('Visitas Guiadas')">🚌 Visitas Guiadas</button>
+      </div>
+
+      <div id="cuadroInfo" class="detalle-info"
+        style="display: none; margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--secondary);">
+        <div id="textoInfo"></div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
